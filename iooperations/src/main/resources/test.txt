@@ -1,0 +1,780 @@
+Now it is necessary to buffer the output stream, because the GZIPOutputStream operates
+more efficiently on a block of data than it does on single bytes of data. In either case,
+the ObjectOutputStream will send single bytes of data to the next stream. If that next
+stream is the ultimate destination—the ByteArrayOutputStream—then no buffering is
+necessary. If there is another filtering stream in the middle (such as the
+GZIPOutputStream in this example), then buffering is often necessary.
+There is no general rule about when to use a buffered stream interposed between two
+other streams. Ultimately it will depend on the type of streams involved, but the likely
+cases will all operate better if they are fed a block of bytes (from the buffered stream)
+rather than a series of single bytes (from the ObjectOutputStream).
+The same situation applies to input streams. In the specific case here, a GZIPInputStream
+will operate more efficiently on a block of bytes; in the general case, streams that are
+interposed between the ObjectInputStream and the original byte source will also be
+better off with a block of bytes.
+Note that this case applies in particular to stream encoders and decoders. When you
+convert between bytes and characters, operating on as large a piece of data as possible
+will provide the best performance. If single bytes or characters are fed to encoders and
+decoders, they will suffer from bad performance.
+For the record, not buffering the gzip streams is exactly the mistake I made when writing
+that compression example. It was a costly mistake, as the data in Table 12-1 shows.
+Now it is necessary to buffer the output stream, because the GZIPOutputStream operates
+more efficiently on a block of data than it does on single bytes of data. In either case,
+the ObjectOutputStream will send single bytes of data to the next stream. If that next
+stream is the ultimate destination—the ByteArrayOutputStream—then no buffering is
+necessary. If there is another filtering stream in the middle (such as the
+GZIPOutputStream in this example), then buffering is often necessary.
+There is no general rule about when to use a buffered stream interposed between two
+other streams. Ultimately it will depend on the type of streams involved, but the likely
+cases will all operate better if they are fed a block of bytes (from the buffered stream)
+rather than a series of single bytes (from the ObjectOutputStream).
+The same situation applies to input streams. In the specific case here, a GZIPInputStream
+will operate more efficiently on a block of bytes; in the general case, streams that are
+interposed between the ObjectInputStream and the original byte source will also be
+better off with a block of bytes.
+Note that this case applies in particular to stream encoders and decoders. When you
+convert between bytes and characters, operating on as large a piece of data as possible
+will provide the best performance. If single bytes or characters are fed to encoders and
+decoders, they will suffer from bad performance.
+For the record, not buffering the gzip streams is exactly the mistake I made when writing
+that compression example. It was a costly mistake, as the data in Table 12-1 shows.
+Now it is necessary to buffer the output stream, because the GZIPOutputStream operates
+more efficiently on a block of data than it does on single bytes of data. In either case,
+the ObjectOutputStream will send single bytes of data to the next stream. If that next
+stream is the ultimate destination—the ByteArrayOutputStream—then no buffering is
+necessary. If there is another filtering stream in the middle (such as the
+GZIPOutputStream in this example), then buffering is often necessary.
+There is no general rule about when to use a buffered stream interposed between two
+other streams. Ultimately it will depend on the type of streams involved, but the likely
+cases will all operate better if they are fed a block of bytes (from the buffered stream)
+rather than a series of single bytes (from the ObjectOutputStream).
+The same situation applies to input streams. In the specific case here, a GZIPInputStream
+will operate more efficiently on a block of bytes; in the general case, streams that are
+interposed between the ObjectInputStream and the original byte source will also be
+better off with a block of bytes.
+Note that this case applies in particular to stream encoders and decoders. When you
+convert between bytes and characters, operating on as large a piece of data as possible
+will provide the best performance. If single bytes or characters are fed to encoders and
+decoders, they will suffer from bad performance.
+For the record, not buffering the gzip streams is exactly the mistake I made when writing
+that compression example. It was a costly mistake, as the data in Table 12-1 shows.
+Now it is necessary to buffer the output stream, because the GZIPOutputStream operates
+more efficiently on a block of data than it does on single bytes of data. In either case,
+the ObjectOutputStream will send single bytes of data to the next stream. If that next
+stream is the ultimate destination—the ByteArrayOutputStream—then no buffering is
+necessary. If there is another filtering stream in the middle (such as the
+GZIPOutputStream in this example), then buffering is often necessary.
+There is no general rule about when to use a buffered stream interposed between two
+other streams. Ultimately it will depend on the type of streams involved, but the likely
+cases will all operate better if they are fed a block of bytes (from the buffered stream)
+rather than a series of single bytes (from the ObjectOutputStream).
+The same situation applies to input streams. In the specific case here, a GZIPInputStream
+will operate more efficiently on a block of bytes; in the general case, streams that are
+interposed between the ObjectInputStream and the original byte source will also be
+better off with a block of bytes.
+Note that this case applies in particular to stream encoders and decoders. When you
+convert between bytes and characters, operating on as large a piece of data as possible
+will provide the best performance. If single bytes or characters are fed to encoders and
+decoders, they will suffer from bad performance.
+For the record, not buffering the gzip streams is exactly the mistake I made when writing
+that compression example. It was a costly mistake, as the data in Table 12-1 shows.
+Now it is necessary to buffer the output stream, because the GZIPOutputStream operates
+more efficiently on a block of data than it does on single bytes of data. In either case,
+the ObjectOutputStream will send single bytes of data to the next stream. If that next
+stream is the ultimate destination—the ByteArrayOutputStream—then no buffering is
+necessary. If there is another filtering stream in the middle (such as the
+GZIPOutputStream in this example), then buffering is often necessary.
+There is no general rule about when to use a buffered stream interposed between two
+other streams. Ultimately it will depend on the type of streams involved, but the likely
+cases will all operate better if they are fed a block of bytes (from the buffered stream)
+rather than a series of single bytes (from the ObjectOutputStream).
+The same situation applies to input streams. In the specific case here, a GZIPInputStream
+will operate more efficiently on a block of bytes; in the general case, streams that are
+interposed between the ObjectInputStream and the original byte source will also be
+better off with a block of bytes.
+Note that this case applies in particular to stream encoders and decoders. When you
+convert between bytes and characters, operating on as large a piece of data as possible
+will provide the best performance. If single bytes or characters are fed to encoders and
+decoders, they will suffer from bad performance.
+For the record, not buffering the gzip streams is exactly the mistake I made when writing
+that compression example. It was a costly mistake, as the data in Table 12-1 shows.
+Now it is necessary to buffer the output stream, because the GZIPOutputStream operates
+more efficiently on a block of data than it does on single bytes of data. In either case,
+the ObjectOutputStream will send single bytes of data to the next stream. If that next
+stream is the ultimate destination—the ByteArrayOutputStream—then no buffering is
+necessary. If there is another filtering stream in the middle (such as the
+GZIPOutputStream in this example), then buffering is often necessary.
+There is no general rule about when to use a buffered stream interposed between two
+other streams. Ultimately it will depend on the type of streams involved, but the likely
+cases will all operate better if they are fed a block of bytes (from the buffered stream)
+rather than a series of single bytes (from the ObjectOutputStream).
+The same situation applies to input streams. In the specific case here, a GZIPInputStream
+will operate more efficiently on a block of bytes; in the general case, streams that are
+interposed between the ObjectInputStream and the original byte source will also be
+better off with a block of bytes.
+Note that this case applies in particular to stream encoders and decoders. When you
+convert between bytes and characters, operating on as large a piece of data as possible
+will provide the best performance. If single bytes or characters are fed to encoders and
+decoders, they will suffer from bad performance.
+For the record, not buffering the gzip streams is exactly the mistake I made when writing
+that compression example. It was a costly mistake, as the data in Table 12-1 shows.
+Now it is necessary to buffer the output stream, because the GZIPOutputStream operates
+more efficiently on a block of data than it does on single bytes of data. In either case,
+the ObjectOutputStream will send single bytes of data to the next stream. If that next
+stream is the ultimate destination—the ByteArrayOutputStream—then no buffering is
+necessary. If there is another filtering stream in the middle (such as the
+GZIPOutputStream in this example), then buffering is often necessary.
+There is no general rule about when to use a buffered stream interposed between two
+other streams. Ultimately it will depend on the type of streams involved, but the likely
+cases will all operate better if they are fed a block of bytes (from the buffered stream)
+rather than a series of single bytes (from the ObjectOutputStream).
+The same situation applies to input streams. In the specific case here, a GZIPInputStream
+will operate more efficiently on a block of bytes; in the general case, streams that are
+interposed between the ObjectInputStream and the original byte source will also be
+better off with a block of bytes.
+Note that this case applies in particular to stream encoders and decoders. When you
+convert between bytes and characters, operating on as large a piece of data as possible
+will provide the best performance. If single bytes or characters are fed to encoders and
+decoders, they will suffer from bad performance.
+For the record, not buffering the gzip streams is exactly the mistake I made when writing
+that compression example. It was a costly mistake, as the data in Table 12-1 shows.
+Now it is necessary to buffer the output stream, because the GZIPOutputStream operates
+more efficiently on a block of data than it does on single bytes of data. In either case,
+the ObjectOutputStream will send single bytes of data to the next stream. If that next
+stream is the ultimate destination—the ByteArrayOutputStream—then no buffering is
+necessary. If there is another filtering stream in the middle (such as the
+GZIPOutputStream in this example), then buffering is often necessary.
+There is no general rule about when to use a buffered stream interposed between two
+other streams. Ultimately it will depend on the type of streams involved, but the likely
+cases will all operate better if they are fed a block of bytes (from the buffered stream)
+rather than a series of single bytes (from the ObjectOutputStream).
+The same situation applies to input streams. In the specific case here, a GZIPInputStream
+will operate more efficiently on a block of bytes; in the general case, streams that are
+interposed between the ObjectInputStream and the original byte source will also be
+better off with a block of bytes.
+Note that this case applies in particular to stream encoders and decoders. When you
+convert between bytes and characters, operating on as large a piece of data as possible
+will provide the best performance. If single bytes or characters are fed to encoders and
+decoders, they will suffer from bad performance.
+For the record, not buffering the gzip streams is exactly the mistake I made when writing
+that compression example. It was a costly mistake, as the data in Table 12-1 shows.
+Now it is necessary to buffer the output stream, because the GZIPOutputStream operates
+more efficiently on a block of data than it does on single bytes of data. In either case,
+the ObjectOutputStream will send single bytes of data to the next stream. If that next
+stream is the ultimate destination—the ByteArrayOutputStream—then no buffering is
+necessary. If there is another filtering stream in the middle (such as the
+GZIPOutputStream in this example), then buffering is often necessary.
+There is no general rule about when to use a buffered stream interposed between two
+other streams. Ultimately it will depend on the type of streams involved, but the likely
+cases will all operate better if they are fed a block of bytes (from the buffered stream)
+rather than a series of single bytes (from the ObjectOutputStream).
+The same situation applies to input streams. In the specific case here, a GZIPInputStream
+will operate more efficiently on a block of bytes; in the general case, streams that are
+interposed between the ObjectInputStream and the original byte source will also be
+better off with a block of bytes.
+Note that this case applies in particular to stream encoders and decoders. When you
+convert between bytes and characters, operating on as large a piece of data as possible
+will provide the best performance. If single bytes or characters are fed to encoders and
+decoders, they will suffer from bad performance.
+For the record, not buffering the gzip streams is exactly the mistake I made when writing
+that compression example. It was a costly mistake, as the data in Table 12-1 shows.
+Now it is necessary to buffer the output stream, because the GZIPOutputStream operates
+more efficiently on a block of data than it does on single bytes of data. In either case,
+the ObjectOutputStream will send single bytes of data to the next stream. If that next
+stream is the ultimate destination—the ByteArrayOutputStream—then no buffering is
+necessary. If there is another filtering stream in the middle (such as the
+GZIPOutputStream in this example), then buffering is often necessary.
+There is no general rule about when to use a buffered stream interposed between two
+other streams. Ultimately it will depend on the type of streams involved, but the likely
+cases will all operate better if they are fed a block of bytes (from the buffered stream)
+rather than a series of single bytes (from the ObjectOutputStream).
+The same situation applies to input streams. In the specific case here, a GZIPInputStream
+will operate more efficiently on a block of bytes; in the general case, streams that are
+interposed between the ObjectInputStream and the original byte source will also be
+better off with a block of bytes.
+Note that this case applies in particular to stream encoders and decoders. When you
+convert between bytes and characters, operating on as large a piece of data as possible
+will provide the best performance. If single bytes or characters are fed to encoders and
+decoders, they will suffer from bad performance.
+For the record, not buffering the gzip streams is exactly the mistake I made when writing
+that compression example. It was a costly mistake, as the data in Table 12-1 shows.
+Now it is necessary to buffer the output stream, because the GZIPOutputStream operates
+more efficiently on a block of data than it does on single bytes of data. In either case,
+the ObjectOutputStream will send single bytes of data to the next stream. If that next
+stream is the ultimate destination—the ByteArrayOutputStream—then no buffering is
+necessary. If there is another filtering stream in the middle (such as the
+GZIPOutputStream in this example), then buffering is often necessary.
+There is no general rule about when to use a buffered stream interposed between two
+other streams. Ultimately it will depend on the type of streams involved, but the likely
+cases will all operate better if they are fed a block of bytes (from the buffered stream)
+rather than a series of single bytes (from the ObjectOutputStream).
+The same situation applies to input streams. In the specific case here, a GZIPInputStream
+will operate more efficiently on a block of bytes; in the general case, streams that are
+interposed between the ObjectInputStream and the original byte source will also be
+better off with a block of bytes.
+Note that this case applies in particular to stream encoders and decoders. When you
+convert between bytes and characters, operating on as large a piece of data as possible
+will provide the best performance. If single bytes or characters are fed to encoders and
+decoders, they will suffer from bad performance.
+For the record, not buffering the gzip streams is exactly the mistake I made when writing
+that compression example. It was a costly mistake, as the data in Table 12-1 shows.
+Now it is necessary to buffer the output stream, because the GZIPOutputStream operates
+more efficiently on a block of data than it does on single bytes of data. In either case,
+the ObjectOutputStream will send single bytes of data to the next stream. If that next
+stream is the ultimate destination—the ByteArrayOutputStream—then no buffering is
+necessary. If there is another filtering stream in the middle (such as the
+GZIPOutputStream in this example), then buffering is often necessary.
+There is no general rule about when to use a buffered stream interposed between two
+other streams. Ultimately it will depend on the type of streams involved, but the likely
+cases will all operate better if they are fed a block of bytes (from the buffered stream)
+rather than a series of single bytes (from the ObjectOutputStream).
+The same situation applies to input streams. In the specific case here, a GZIPInputStream
+will operate more efficiently on a block of bytes; in the general case, streams that are
+interposed between the ObjectInputStream and the original byte source will also be
+better off with a block of bytes.
+Note that this case applies in particular to stream encoders and decoders. When you
+convert between bytes and characters, operating on as large a piece of data as possible
+will provide the best performance. If single bytes or characters are fed to encoders and
+decoders, they will suffer from bad performance.
+For the record, not buffering the gzip streams is exactly the mistake I made when writing
+that compression example. It was a costly mistake, as the data in Table 12-1 shows.
+Now it is necessary to buffer the output stream, because the GZIPOutputStream operates
+more efficiently on a block of data than it does on single bytes of data. In either case,
+the ObjectOutputStream will send single bytes of data to the next stream. If that next
+stream is the ultimate destination—the ByteArrayOutputStream—then no buffering is
+necessary. If there is another filtering stream in the middle (such as the
+GZIPOutputStream in this example), then buffering is often necessary.
+There is no general rule about when to use a buffered stream interposed between two
+other streams. Ultimately it will depend on the type of streams involved, but the likely
+cases will all operate better if they are fed a block of bytes (from the buffered stream)
+rather than a series of single bytes (from the ObjectOutputStream).
+The same situation applies to input streams. In the specific case here, a GZIPInputStream
+will operate more efficiently on a block of bytes; in the general case, streams that are
+interposed between the ObjectInputStream and the original byte source will also be
+better off with a block of bytes.
+Note that this case applies in particular to stream encoders and decoders. When you
+convert between bytes and characters, operating on as large a piece of data as possible
+will provide the best performance. If single bytes or characters are fed to encoders and
+decoders, they will suffer from bad performance.
+For the record, not buffering the gzip streams is exactly the mistake I made when writing
+that compression example. It was a costly mistake, as the data in Table 12-1 shows.
+Now it is necessary to buffer the output stream, because the GZIPOutputStream operates
+more efficiently on a block of data than it does on single bytes of data. In either case,
+the ObjectOutputStream will send single bytes of data to the next stream. If that next
+stream is the ultimate destination—the ByteArrayOutputStream—then no buffering is
+necessary. If there is another filtering stream in the middle (such as the
+GZIPOutputStream in this example), then buffering is often necessary.
+There is no general rule about when to use a buffered stream interposed between two
+other streams. Ultimately it will depend on the type of streams involved, but the likely
+cases will all operate better if they are fed a block of bytes (from the buffered stream)
+rather than a series of single bytes (from the ObjectOutputStream).
+The same situation applies to input streams. In the specific case here, a GZIPInputStream
+will operate more efficiently on a block of bytes; in the general case, streams that are
+interposed between the ObjectInputStream and the original byte source will also be
+better off with a block of bytes.
+Note that this case applies in particular to stream encoders and decoders. When you
+convert between bytes and characters, operating on as large a piece of data as possible
+will provide the best performance. If single bytes or characters are fed to encoders and
+decoders, they will suffer from bad performance.
+For the record, not buffering the gzip streams is exactly the mistake I made when writing
+that compression example. It was a costly mistake, as the data in Table 12-1 shows.
+Now it is necessary to buffer the output stream, because the GZIPOutputStream operates
+more efficiently on a block of data than it does on single bytes of data. In either case,
+the ObjectOutputStream will send single bytes of data to the next stream. If that next
+stream is the ultimate destination—the ByteArrayOutputStream—then no buffering is
+necessary. If there is another filtering stream in the middle (such as the
+GZIPOutputStream in this example), then buffering is often necessary.
+There is no general rule about when to use a buffered stream interposed between two
+other streams. Ultimately it will depend on the type of streams involved, but the likely
+cases will all operate better if they are fed a block of bytes (from the buffered stream)
+rather than a series of single bytes (from the ObjectOutputStream).
+The same situation applies to input streams. In the specific case here, a GZIPInputStream
+will operate more efficiently on a block of bytes; in the general case, streams that are
+interposed between the ObjectInputStream and the original byte source will also be
+better off with a block of bytes.
+Note that this case applies in particular to stream encoders and decoders. When you
+convert between bytes and characters, operating on as large a piece of data as possible
+will provide the best performance. If single bytes or characters are fed to encoders and
+decoders, they will suffer from bad performance.
+For the record, not buffering the gzip streams is exactly the mistake I made when writing
+that compression example. It was a costly mistake, as the data in Table 12-1 shows.
+Now it is necessary to buffer the output stream, because the GZIPOutputStream operates
+more efficiently on a block of data than it does on single bytes of data. In either case,
+the ObjectOutputStream will send single bytes of data to the next stream. If that next
+stream is the ultimate destination—the ByteArrayOutputStream—then no buffering is
+necessary. If there is another filtering stream in the middle (such as the
+GZIPOutputStream in this example), then buffering is often necessary.
+There is no general rule about when to use a buffered stream interposed between two
+other streams. Ultimately it will depend on the type of streams involved, but the likely
+cases will all operate better if they are fed a block of bytes (from the buffered stream)
+rather than a series of single bytes (from the ObjectOutputStream).
+The same situation applies to input streams. In the specific case here, a GZIPInputStream
+will operate more efficiently on a block of bytes; in the general case, streams that are
+interposed between the ObjectInputStream and the original byte source will also be
+better off with a block of bytes.
+Note that this case applies in particular to stream encoders and decoders. When you
+convert between bytes and characters, operating on as large a piece of data as possible
+will provide the best performance. If single bytes or characters are fed to encoders and
+decoders, they will suffer from bad performance.
+For the record, not buffering the gzip streams is exactly the mistake I made when writing
+that compression example. It was a costly mistake, as the data in Table 12-1 shows.
+Now it is necessary to buffer the output stream, because the GZIPOutputStream operates
+more efficiently on a block of data than it does on single bytes of data. In either case,
+the ObjectOutputStream will send single bytes of data to the next stream. If that next
+stream is the ultimate destination—the ByteArrayOutputStream—then no buffering is
+necessary. If there is another filtering stream in the middle (such as the
+GZIPOutputStream in this example), then buffering is often necessary.
+There is no general rule about when to use a buffered stream interposed between two
+other streams. Ultimately it will depend on the type of streams involved, but the likely
+cases will all operate better if they are fed a block of bytes (from the buffered stream)
+rather than a series of single bytes (from the ObjectOutputStream).
+The same situation applies to input streams. In the specific case here, a GZIPInputStream
+will operate more efficiently on a block of bytes; in the general case, streams that are
+interposed between the ObjectInputStream and the original byte source will also be
+better off with a block of bytes.
+Note that this case applies in particular to stream encoders and decoders. When you
+convert between bytes and characters, operating on as large a piece of data as possible
+will provide the best performance. If single bytes or characters are fed to encoders and
+decoders, they will suffer from bad performance.
+For the record, not buffering the gzip streams is exactly the mistake I made when writing
+that compression example. It was a costly mistake, as the data in Table 12-1 shows.
+Now it is necessary to buffer the output stream, because the GZIPOutputStream operates
+more efficiently on a block of data than it does on single bytes of data. In either case,
+the ObjectOutputStream will send single bytes of data to the next stream. If that next
+stream is the ultimate destination—the ByteArrayOutputStream—then no buffering is
+necessary. If there is another filtering stream in the middle (such as the
+GZIPOutputStream in this example), then buffering is often necessary.
+There is no general rule about when to use a buffered stream interposed between two
+other streams. Ultimately it will depend on the type of streams involved, but the likely
+cases will all operate better if they are fed a block of bytes (from the buffered stream)
+rather than a series of single bytes (from the ObjectOutputStream).
+The same situation applies to input streams. In the specific case here, a GZIPInputStream
+will operate more efficiently on a block of bytes; in the general case, streams that are
+interposed between the ObjectInputStream and the original byte source will also be
+better off with a block of bytes.
+Note that this case applies in particular to stream encoders and decoders. When you
+convert between bytes and characters, operating on as large a piece of data as possible
+will provide the best performance. If single bytes or characters are fed to encoders and
+decoders, they will suffer from bad performance.
+For the record, not buffering the gzip streams is exactly the mistake I made when writing
+that compression example. It was a costly mistake, as the data in Table 12-1 shows.
+Now it is necessary to buffer the output stream, because the GZIPOutputStream operates
+more efficiently on a block of data than it does on single bytes of data. In either case,
+the ObjectOutputStream will send single bytes of data to the next stream. If that next
+stream is the ultimate destination—the ByteArrayOutputStream—then no buffering is
+necessary. If there is another filtering stream in the middle (such as the
+GZIPOutputStream in this example), then buffering is often necessary.
+There is no general rule about when to use a buffered stream interposed between two
+other streams. Ultimately it will depend on the type of streams involved, but the likely
+cases will all operate better if they are fed a block of bytes (from the buffered stream)
+rather than a series of single bytes (from the ObjectOutputStream).
+The same situation applies to input streams. In the specific case here, a GZIPInputStream
+will operate more efficiently on a block of bytes; in the general case, streams that are
+interposed between the ObjectInputStream and the original byte source will also be
+better off with a block of bytes.
+Note that this case applies in particular to stream encoders and decoders. When you
+convert between bytes and characters, operating on as large a piece of data as possible
+will provide the best performance. If single bytes or characters are fed to encoders and
+decoders, they will suffer from bad performance.
+For the record, not buffering the gzip streams is exactly the mistake I made when writing
+that compression example. It was a costly mistake, as the data in Table 12-1 shows.
+Now it is necessary to buffer the output stream, because the GZIPOutputStream operates
+more efficiently on a block of data than it does on single bytes of data. In either case,
+the ObjectOutputStream will send single bytes of data to the next stream. If that next
+stream is the ultimate destination—the ByteArrayOutputStream—then no buffering is
+necessary. If there is another filtering stream in the middle (such as the
+GZIPOutputStream in this example), then buffering is often necessary.
+There is no general rule about when to use a buffered stream interposed between two
+other streams. Ultimately it will depend on the type of streams involved, but the likely
+cases will all operate better if they are fed a block of bytes (from the buffered stream)
+rather than a series of single bytes (from the ObjectOutputStream).
+The same situation applies to input streams. In the specific case here, a GZIPInputStream
+will operate more efficiently on a block of bytes; in the general case, streams that are
+interposed between the ObjectInputStream and the original byte source will also be
+better off with a block of bytes.
+Note that this case applies in particular to stream encoders and decoders. When you
+convert between bytes and characters, operating on as large a piece of data as possible
+will provide the best performance. If single bytes or characters are fed to encoders and
+decoders, they will suffer from bad performance.
+For the record, not buffering the gzip streams is exactly the mistake I made when writing
+that compression example. It was a costly mistake, as the data in Table 12-1 shows.
+Now it is necessary to buffer the output stream, because the GZIPOutputStream operates
+more efficiently on a block of data than it does on single bytes of data. In either case,
+the ObjectOutputStream will send single bytes of data to the next stream. If that next
+stream is the ultimate destination—the ByteArrayOutputStream—then no buffering is
+necessary. If there is another filtering stream in the middle (such as the
+GZIPOutputStream in this example), then buffering is often necessary.
+There is no general rule about when to use a buffered stream interposed between two
+other streams. Ultimately it will depend on the type of streams involved, but the likely
+cases will all operate better if they are fed a block of bytes (from the buffered stream)
+rather than a series of single bytes (from the ObjectOutputStream).
+The same situation applies to input streams. In the specific case here, a GZIPInputStream
+will operate more efficiently on a block of bytes; in the general case, streams that are
+interposed between the ObjectInputStream and the original byte source will also be
+better off with a block of bytes.
+Note that this case applies in particular to stream encoders and decoders. When you
+convert between bytes and characters, operating on as large a piece of data as possible
+will provide the best performance. If single bytes or characters are fed to encoders and
+decoders, they will suffer from bad performance.
+For the record, not buffering the gzip streams is exactly the mistake I made when writing
+that compression example. It was a costly mistake, as the data in Table 12-1 shows.
+Now it is necessary to buffer the output stream, because the GZIPOutputStream operates
+more efficiently on a block of data than it does on single bytes of data. In either case,
+the ObjectOutputStream will send single bytes of data to the next stream. If that next
+stream is the ultimate destination—the ByteArrayOutputStream—then no buffering is
+necessary. If there is another filtering stream in the middle (such as the
+GZIPOutputStream in this example), then buffering is often necessary.
+There is no general rule about when to use a buffered stream interposed between two
+other streams. Ultimately it will depend on the type of streams involved, but the likely
+cases will all operate better if they are fed a block of bytes (from the buffered stream)
+rather than a series of single bytes (from the ObjectOutputStream).
+The same situation applies to input streams. In the specific case here, a GZIPInputStream
+will operate more efficiently on a block of bytes; in the general case, streams that are
+interposed between the ObjectInputStream and the original byte source will also be
+better off with a block of bytes.
+Note that this case applies in particular to stream encoders and decoders. When you
+convert between bytes and characters, operating on as large a piece of data as possible
+will provide the best performance. If single bytes or characters are fed to encoders and
+decoders, they will suffer from bad performance.
+For the record, not buffering the gzip streams is exactly the mistake I made when writing
+that compression example. It was a costly mistake, as the data in Table 12-1 shows.
+Now it is necessary to buffer the output stream, because the GZIPOutputStream operates
+more efficiently on a block of data than it does on single bytes of data. In either case,
+the ObjectOutputStream will send single bytes of data to the next stream. If that next
+stream is the ultimate destination—the ByteArrayOutputStream—then no buffering is
+necessary. If there is another filtering stream in the middle (such as the
+GZIPOutputStream in this example), then buffering is often necessary.
+There is no general rule about when to use a buffered stream interposed between two
+other streams. Ultimately it will depend on the type of streams involved, but the likely
+cases will all operate better if they are fed a block of bytes (from the buffered stream)
+rather than a series of single bytes (from the ObjectOutputStream).
+The same situation applies to input streams. In the specific case here, a GZIPInputStream
+will operate more efficiently on a block of bytes; in the general case, streams that are
+interposed between the ObjectInputStream and the original byte source will also be
+better off with a block of bytes.
+Note that this case applies in particular to stream encoders and decoders. When you
+convert between bytes and characters, operating on as large a piece of data as possible
+will provide the best performance. If single bytes or characters are fed to encoders and
+decoders, they will suffer from bad performance.
+For the record, not buffering the gzip streams is exactly the mistake I made when writing
+that compression example. It was a costly mistake, as the data in Table 12-1 shows.
+Now it is necessary to buffer the output stream, because the GZIPOutputStream operates
+more efficiently on a block of data than it does on single bytes of data. In either case,
+the ObjectOutputStream will send single bytes of data to the next stream. If that next
+stream is the ultimate destination—the ByteArrayOutputStream—then no buffering is
+necessary. If there is another filtering stream in the middle (such as the
+GZIPOutputStream in this example), then buffering is often necessary.
+There is no general rule about when to use a buffered stream interposed between two
+other streams. Ultimately it will depend on the type of streams involved, but the likely
+cases will all operate better if they are fed a block of bytes (from the buffered stream)
+rather than a series of single bytes (from the ObjectOutputStream).
+The same situation applies to input streams. In the specific case here, a GZIPInputStream
+will operate more efficiently on a block of bytes; in the general case, streams that are
+interposed between the ObjectInputStream and the original byte source will also be
+better off with a block of bytes.
+Note that this case applies in particular to stream encoders and decoders. When you
+convert between bytes and characters, operating on as large a piece of data as possible
+will provide the best performance. If single bytes or characters are fed to encoders and
+decoders, they will suffer from bad performance.
+For the record, not buffering the gzip streams is exactly the mistake I made when writing
+that compression example. It was a costly mistake, as the data in Table 12-1 shows.
+Now it is necessary to buffer the output stream, because the GZIPOutputStream operates
+more efficiently on a block of data than it does on single bytes of data. In either case,
+the ObjectOutputStream will send single bytes of data to the next stream. If that next
+stream is the ultimate destination—the ByteArrayOutputStream—then no buffering is
+necessary. If there is another filtering stream in the middle (such as the
+GZIPOutputStream in this example), then buffering is often necessary.
+There is no general rule about when to use a buffered stream interposed between two
+other streams. Ultimately it will depend on the type of streams involved, but the likely
+cases will all operate better if they are fed a block of bytes (from the buffered stream)
+rather than a series of single bytes (from the ObjectOutputStream).
+The same situation applies to input streams. In the specific case here, a GZIPInputStream
+will operate more efficiently on a block of bytes; in the general case, streams that are
+interposed between the ObjectInputStream and the original byte source will also be
+better off with a block of bytes.
+Note that this case applies in particular to stream encoders and decoders. When you
+convert between bytes and characters, operating on as large a piece of data as possible
+will provide the best performance. If single bytes or characters are fed to encoders and
+decoders, they will suffer from bad performance.
+For the record, not buffering the gzip streams is exactly the mistake I made when writing
+that compression example. It was a costly mistake, as the data in Table 12-1 shows.
+Now it is necessary to buffer the output stream, because the GZIPOutputStream operates
+more efficiently on a block of data than it does on single bytes of data. In either case,
+the ObjectOutputStream will send single bytes of data to the next stream. If that next
+stream is the ultimate destination—the ByteArrayOutputStream—then no buffering is
+necessary. If there is another filtering stream in the middle (such as the
+GZIPOutputStream in this example), then buffering is often necessary.
+There is no general rule about when to use a buffered stream interposed between two
+other streams. Ultimately it will depend on the type of streams involved, but the likely
+cases will all operate better if they are fed a block of bytes (from the buffered stream)
+rather than a series of single bytes (from the ObjectOutputStream).
+The same situation applies to input streams. In the specific case here, a GZIPInputStream
+will operate more efficiently on a block of bytes; in the general case, streams that are
+interposed between the ObjectInputStream and the original byte source will also be
+better off with a block of bytes.
+Note that this case applies in particular to stream encoders and decoders. When you
+convert between bytes and characters, operating on as large a piece of data as possible
+will provide the best performance. If single bytes or characters are fed to encoders and
+decoders, they will suffer from bad performance.
+For the record, not buffering the gzip streams is exactly the mistake I made when writing
+that compression example. It was a costly mistake, as the data in Table 12-1 shows.
+Now it is necessary to buffer the output stream, because the GZIPOutputStream operates
+more efficiently on a block of data than it does on single bytes of data. In either case,
+the ObjectOutputStream will send single bytes of data to the next stream. If that next
+stream is the ultimate destination—the ByteArrayOutputStream—then no buffering is
+necessary. If there is another filtering stream in the middle (such as the
+GZIPOutputStream in this example), then buffering is often necessary.
+There is no general rule about when to use a buffered stream interposed between two
+other streams. Ultimately it will depend on the type of streams involved, but the likely
+cases will all operate better if they are fed a block of bytes (from the buffered stream)
+rather than a series of single bytes (from the ObjectOutputStream).
+The same situation applies to input streams. In the specific case here, a GZIPInputStream
+will operate more efficiently on a block of bytes; in the general case, streams that are
+interposed between the ObjectInputStream and the original byte source will also be
+better off with a block of bytes.
+Note that this case applies in particular to stream encoders and decoders. When you
+convert between bytes and characters, operating on as large a piece of data as possible
+will provide the best performance. If single bytes or characters are fed to encoders and
+decoders, they will suffer from bad performance.
+For the record, not buffering the gzip streams is exactly the mistake I made when writing
+that compression example. It was a costly mistake, as the data in Table 12-1 shows.
+Now it is necessary to buffer the output stream, because the GZIPOutputStream operates
+more efficiently on a block of data than it does on single bytes of data. In either case,
+the ObjectOutputStream will send single bytes of data to the next stream. If that next
+stream is the ultimate destination—the ByteArrayOutputStream—then no buffering is
+necessary. If there is another filtering stream in the middle (such as the
+GZIPOutputStream in this example), then buffering is often necessary.
+There is no general rule about when to use a buffered stream interposed between two
+other streams. Ultimately it will depend on the type of streams involved, but the likely
+cases will all operate better if they are fed a block of bytes (from the buffered stream)
+rather than a series of single bytes (from the ObjectOutputStream).
+The same situation applies to input streams. In the specific case here, a GZIPInputStream
+will operate more efficiently on a block of bytes; in the general case, streams that are
+interposed between the ObjectInputStream and the original byte source will also be
+better off with a block of bytes.
+Note that this case applies in particular to stream encoders and decoders. When you
+convert between bytes and characters, operating on as large a piece of data as possible
+will provide the best performance. If single bytes or characters are fed to encoders and
+decoders, they will suffer from bad performance.
+For the record, not buffering the gzip streams is exactly the mistake I made when writing
+that compression example. It was a costly mistake, as the data in Table 12-1 shows.
+Now it is necessary to buffer the output stream, because the GZIPOutputStream operates
+more efficiently on a block of data than it does on single bytes of data. In either case,
+the ObjectOutputStream will send single bytes of data to the next stream. If that next
+stream is the ultimate destination—the ByteArrayOutputStream—then no buffering is
+necessary. If there is another filtering stream in the middle (such as the
+GZIPOutputStream in this example), then buffering is often necessary.
+There is no general rule about when to use a buffered stream interposed between two
+other streams. Ultimately it will depend on the type of streams involved, but the likely
+cases will all operate better if they are fed a block of bytes (from the buffered stream)
+rather than a series of single bytes (from the ObjectOutputStream).
+The same situation applies to input streams. In the specific case here, a GZIPInputStream
+will operate more efficiently on a block of bytes; in the general case, streams that are
+interposed between the ObjectInputStream and the original byte source will also be
+better off with a block of bytes.
+Note that this case applies in particular to stream encoders and decoders. When you
+convert between bytes and characters, operating on as large a piece of data as possible
+will provide the best performance. If single bytes or characters are fed to encoders and
+decoders, they will suffer from bad performance.
+For the record, not buffering the gzip streams is exactly the mistake I made when writing
+that compression example. It was a costly mistake, as the data in Table 12-1 shows.
+Now it is necessary to buffer the output stream, because the GZIPOutputStream operates
+more efficiently on a block of data than it does on single bytes of data. In either case,
+the ObjectOutputStream will send single bytes of data to the next stream. If that next
+stream is the ultimate destination—the ByteArrayOutputStream—then no buffering is
+necessary. If there is another filtering stream in the middle (such as the
+GZIPOutputStream in this example), then buffering is often necessary.
+There is no general rule about when to use a buffered stream interposed between two
+other streams. Ultimately it will depend on the type of streams involved, but the likely
+cases will all operate better if they are fed a block of bytes (from the buffered stream)
+rather than a series of single bytes (from the ObjectOutputStream).
+The same situation applies to input streams. In the specific case here, a GZIPInputStream
+will operate more efficiently on a block of bytes; in the general case, streams that are
+interposed between the ObjectInputStream and the original byte source will also be
+better off with a block of bytes.
+Note that this case applies in particular to stream encoders and decoders. When you
+convert between bytes and characters, operating on as large a piece of data as possible
+will provide the best performance. If single bytes or characters are fed to encoders and
+decoders, they will suffer from bad performance.
+For the record, not buffering the gzip streams is exactly the mistake I made when writing
+that compression example. It was a costly mistake, as the data in Table 12-1 shows.
+Now it is necessary to buffer the output stream, because the GZIPOutputStream operates
+more efficiently on a block of data than it does on single bytes of data. In either case,
+the ObjectOutputStream will send single bytes of data to the next stream. If that next
+stream is the ultimate destination—the ByteArrayOutputStream—then no buffering is
+necessary. If there is another filtering stream in the middle (such as the
+GZIPOutputStream in this example), then buffering is often necessary.
+There is no general rule about when to use a buffered stream interposed between two
+other streams. Ultimately it will depend on the type of streams involved, but the likely
+cases will all operate better if they are fed a block of bytes (from the buffered stream)
+rather than a series of single bytes (from the ObjectOutputStream).
+The same situation applies to input streams. In the specific case here, a GZIPInputStream
+will operate more efficiently on a block of bytes; in the general case, streams that are
+interposed between the ObjectInputStream and the original byte source will also be
+better off with a block of bytes.
+Note that this case applies in particular to stream encoders and decoders. When you
+convert between bytes and characters, operating on as large a piece of data as possible
+will provide the best performance. If single bytes or characters are fed to encoders and
+decoders, they will suffer from bad performance.
+For the record, not buffering the gzip streams is exactly the mistake I made when writing
+that compression example. It was a costly mistake, as the data in Table 12-1 shows.
+Now it is necessary to buffer the output stream, because the GZIPOutputStream operates
+more efficiently on a block of data than it does on single bytes of data. In either case,
+the ObjectOutputStream will send single bytes of data to the next stream. If that next
+stream is the ultimate destination—the ByteArrayOutputStream—then no buffering is
+necessary. If there is another filtering stream in the middle (such as the
+GZIPOutputStream in this example), then buffering is often necessary.
+There is no general rule about when to use a buffered stream interposed between two
+other streams. Ultimately it will depend on the type of streams involved, but the likely
+cases will all operate better if they are fed a block of bytes (from the buffered stream)
+rather than a series of single bytes (from the ObjectOutputStream).
+The same situation applies to input streams. In the specific case here, a GZIPInputStream
+will operate more efficiently on a block of bytes; in the general case, streams that are
+interposed between the ObjectInputStream and the original byte source will also be
+better off with a block of bytes.
+Note that this case applies in particular to stream encoders and decoders. When you
+convert between bytes and characters, operating on as large a piece of data as possible
+will provide the best performance. If single bytes or characters are fed to encoders and
+decoders, they will suffer from bad performance.
+For the record, not buffering the gzip streams is exactly the mistake I made when writing
+that compression example. It was a costly mistake, as the data in Table 12-1 shows.
+Now it is necessary to buffer the output stream, because the GZIPOutputStream operates
+more efficiently on a block of data than it does on single bytes of data. In either case,
+the ObjectOutputStream will send single bytes of data to the next stream. If that next
+stream is the ultimate destination—the ByteArrayOutputStream—then no buffering is
+necessary. If there is another filtering stream in the middle (such as the
+GZIPOutputStream in this example), then buffering is often necessary.
+There is no general rule about when to use a buffered stream interposed between two
+other streams. Ultimately it will depend on the type of streams involved, but the likely
+cases will all operate better if they are fed a block of bytes (from the buffered stream)
+rather than a series of single bytes (from the ObjectOutputStream).
+The same situation applies to input streams. In the specific case here, a GZIPInputStream
+will operate more efficiently on a block of bytes; in the general case, streams that are
+interposed between the ObjectInputStream and the original byte source will also be
+better off with a block of bytes.
+Note that this case applies in particular to stream encoders and decoders. When you
+convert between bytes and characters, operating on as large a piece of data as possible
+will provide the best performance. If single bytes or characters are fed to encoders and
+decoders, they will suffer from bad performance.
+For the record, not buffering the gzip streams is exactly the mistake I made when writing
+that compression example. It was a costly mistake, as the data in Table 12-1 shows.
+Now it is necessary to buffer the output stream, because the GZIPOutputStream operates
+more efficiently on a block of data than it does on single bytes of data. In either case,
+the ObjectOutputStream will send single bytes of data to the next stream. If that next
+stream is the ultimate destination—the ByteArrayOutputStream—then no buffering is
+necessary. If there is another filtering stream in the middle (such as the
+GZIPOutputStream in this example), then buffering is often necessary.
+There is no general rule about when to use a buffered stream interposed between two
+other streams. Ultimately it will depend on the type of streams involved, but the likely
+cases will all operate better if they are fed a block of bytes (from the buffered stream)
+rather than a series of single bytes (from the ObjectOutputStream).
+The same situation applies to input streams. In the specific case here, a GZIPInputStream
+will operate more efficiently on a block of bytes; in the general case, streams that are
+interposed between the ObjectInputStream and the original byte source will also be
+better off with a block of bytes.
+Note that this case applies in particular to stream encoders and decoders. When you
+convert between bytes and characters, operating on as large a piece of data as possible
+will provide the best performance. If single bytes or characters are fed to encoders and
+decoders, they will suffer from bad performance.
+For the record, not buffering the gzip streams is exactly the mistake I made when writing
+that compression example. It was a costly mistake, as the data in Table 12-1 shows.
+Now it is necessary to buffer the output stream, because the GZIPOutputStream operates
+more efficiently on a block of data than it does on single bytes of data. In either case,
+the ObjectOutputStream will send single bytes of data to the next stream. If that next
+stream is the ultimate destination—the ByteArrayOutputStream—then no buffering is
+necessary. If there is another filtering stream in the middle (such as the
+GZIPOutputStream in this example), then buffering is often necessary.
+There is no general rule about when to use a buffered stream interposed between two
+other streams. Ultimately it will depend on the type of streams involved, but the likely
+cases will all operate better if they are fed a block of bytes (from the buffered stream)
+rather than a series of single bytes (from the ObjectOutputStream).
+The same situation applies to input streams. In the specific case here, a GZIPInputStream
+will operate more efficiently on a block of bytes; in the general case, streams that are
+interposed between the ObjectInputStream and the original byte source will also be
+better off with a block of bytes.
+Note that this case applies in particular to stream encoders and decoders. When you
+convert between bytes and characters, operating on as large a piece of data as possible
+will provide the best performance. If single bytes or characters are fed to encoders and
+decoders, they will suffer from bad performance.
+For the record, not buffering the gzip streams is exactly the mistake I made when writing
+that compression example. It was a costly mistake, as the data in Table 12-1 shows.
+Now it is necessary to buffer the output stream, because the GZIPOutputStream operates
+more efficiently on a block of data than it does on single bytes of data. In either case,
+the ObjectOutputStream will send single bytes of data to the next stream. If that next
+stream is the ultimate destination—the ByteArrayOutputStream—then no buffering is
+necessary. If there is another filtering stream in the middle (such as the
+GZIPOutputStream in this example), then buffering is often necessary.
+There is no general rule about when to use a buffered stream interposed between two
+other streams. Ultimately it will depend on the type of streams involved, but the likely
+cases will all operate better if they are fed a block of bytes (from the buffered stream)
+rather than a series of single bytes (from the ObjectOutputStream).
+The same situation applies to input streams. In the specific case here, a GZIPInputStream
+will operate more efficiently on a block of bytes; in the general case, streams that are
+interposed between the ObjectInputStream and the original byte source will also be
+better off with a block of bytes.
+Note that this case applies in particular to stream encoders and decoders. When you
+convert between bytes and characters, operating on as large a piece of data as possible
+will provide the best performance. If single bytes or characters are fed to encoders and
+decoders, they will suffer from bad performance.
+For the record, not buffering the gzip streams is exactly the mistake I made when writing
+that compression example. It was a costly mistake, as the data in Table 12-1 shows.
+Now it is necessary to buffer the output stream, because the GZIPOutputStream operates
+more efficiently on a block of data than it does on single bytes of data. In either case,
+the ObjectOutputStream will send single bytes of data to the next stream. If that next
+stream is the ultimate destination—the ByteArrayOutputStream—then no buffering is
+necessary. If there is another filtering stream in the middle (such as the
+GZIPOutputStream in this example), then buffering is often necessary.
+There is no general rule about when to use a buffered stream interposed between two
+other streams. Ultimately it will depend on the type of streams involved, but the likely
+cases will all operate better if they are fed a block of bytes (from the buffered stream)
+rather than a series of single bytes (from the ObjectOutputStream).
+The same situation applies to input streams. In the specific case here, a GZIPInputStream
+will operate more efficiently on a block of bytes; in the general case, streams that are
+interposed between the ObjectInputStream and the original byte source will also be
+better off with a block of bytes.
+Note that this case applies in particular to stream encoders and decoders. When you
+convert between bytes and characters, operating on as large a piece of data as possible
+will provide the best performance. If single bytes or characters are fed to encoders and
+decoders, they will suffer from bad performance.
+For the record, not buffering the gzip streams is exactly the mistake I made when writing
+that compression example. It was a costly mistake, as the data in Table 12-1 shows.
+Now it is necessary to buffer the output stream, because the GZIPOutputStream operates
+more efficiently on a block of data than it does on single bytes of data. In either case,
+the ObjectOutputStream will send single bytes of data to the next stream. If that next
+stream is the ultimate destination—the ByteArrayOutputStream—then no buffering is
+necessary. If there is another filtering stream in the middle (such as the
+GZIPOutputStream in this example), then buffering is often necessary.
+There is no general rule about when to use a buffered stream interposed between two
+other streams. Ultimately it will depend on the type of streams involved, but the likely
+cases will all operate better if they are fed a block of bytes (from the buffered stream)
+rather than a series of single bytes (from the ObjectOutputStream).
+The same situation applies to input streams. In the specific case here, a GZIPInputStream
+will operate more efficiently on a block of bytes; in the general case, streams that are
+interposed between the ObjectInputStream and the original byte source will also be
+better off with a block of bytes.
+Note that this case applies in particular to stream encoders and decoders. When you
+convert between bytes and characters, operating on as large a piece of data as possible
+will provide the best performance. If single bytes or characters are fed to encoders and
+decoders, they will suffer from bad performance.
+For the record, not buffering the gzip streams is exactly the mistake I made when writing
+that compression example. It was a costly mistake, as the data in Table 12-1 shows.
+Now it is necessary to buffer the output stream, because the GZIPOutputStream operates
+more efficiently on a block of data than it does on single bytes of data. In either case,
+the ObjectOutputStream will send single bytes of data to the next stream. If that next
+stream is the ultimate destination—the ByteArrayOutputStream—then no buffering is
+necessary. If there is another filtering stream in the middle (such as the
+GZIPOutputStream in this example), then buffering is often necessary.
+There is no general rule about when to use a buffered stream interposed between two
+other streams. Ultimately it will depend on the type of streams involved, but the likely
+cases will all operate better if they are fed a block of bytes (from the buffered stream)
+rather than a series of single bytes (from the ObjectOutputStream).
+The same situation applies to input streams. In the specific case here, a GZIPInputStream
+will operate more efficiently on a block of bytes; in the general case, streams that are
+interposed between the ObjectInputStream and the original byte source will also be
+better off with a block of bytes.
+Note that this case applies in particular to stream encoders and decoders. When you
+convert between bytes and characters, operating on as large a piece of data as possible
+will provide the best performance. If single bytes or characters are fed to encoders and
+decoders, they will suffer from bad performance.
+For the record, not buffering the gzip streams is exactly the mistake I made when writing
+that compression example. It was a costly mistake, as the data in Table 12-1 shows.
