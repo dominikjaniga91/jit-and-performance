@@ -21,12 +21,12 @@ public class IOOperationsBenchmark {
         org.openjdk.jmh.Main.main(args);
     }
 
-    private File file = new File("/home/epam/IdeaProjects/jit-and-performance/iooperations/src/main/resources/test.txt");
+    private File file = new File("C:\\Users\\Dominik_Janiga\\IdeaProjects\\jit-and-performance\\iooperations\\src\\main\\resources\\test.txt");
 
     @Benchmark
     public void readWithFileInputStream() throws IOException {
 
-        try (var fis = new FileInputStream(file)) {
+        try (FileInputStream fis = new FileInputStream(file)) {
             int i;
             while ((i = fis.read()) != -1) {
 //                System.out.print((char) i);
@@ -38,10 +38,10 @@ public class IOOperationsBenchmark {
     @Benchmark
     public void readWithBufferedReader() throws IOException {
 
-        try (var bufferedReader = new BufferedReader(new FileReader(file))) {
+        try (BufferedReader bufferedReader = new BufferedReader(new FileReader(file))) {
             String line;
             while ((line = bufferedReader.readLine()) != null) {
-//                System.out.print((char) i);
+//                System.out.print(line);
             }
         }
     }
