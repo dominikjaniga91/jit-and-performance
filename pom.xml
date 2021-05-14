@@ -12,6 +12,7 @@
         <module>string</module>
         <module>iooperations</module>
         <module>register</module>
+        <module>withoutjit</module>
     </modules>
 
     <properties>
