@@ -13,6 +13,9 @@
         <module>iooperations</module>
         <module>register</module>
         <module>withoutjit</module>
+        <module>arraylist</module>
+        <module>loopunrolling</module>
+        <module>inlining</module>
     </modules>
 
     <properties>

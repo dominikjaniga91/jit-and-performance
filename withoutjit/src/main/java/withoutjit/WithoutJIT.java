@@ -6,6 +6,7 @@ import org.openjdk.jmh.runner.RunnerException;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
+
 /**
  * @author Dominik Janiga
  * @version 0.1
@@ -15,6 +16,7 @@ import java.util.concurrent.TimeUnit;
 @Measurement(iterations = 20, timeUnit = TimeUnit.NANOSECONDS,  time = 10)
 @Warmup(iterations = 10, timeUnit = TimeUnit.NANOSECONDS, time = 10)
 @OutputTimeUnit(TimeUnit.NANOSECONDS)
+@Fork(value = 10, jvmArgsAppend = {"-Xint"})
 public class WithoutJIT {
 
     public static void main(String[] args) throws RunnerException, IOException {
