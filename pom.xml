@@ -16,6 +16,7 @@
         <module>arraylist</module>
         <module>loopunrolling</module>
         <module>inlining</module>
+        <module>benchmark-first-task</module>
     </modules>
 
     <properties>

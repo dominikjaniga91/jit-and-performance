@@ -1,10 +1,12 @@
 package inlining;
 
-public class Inlining {
+public class EmptyMethod {
 
     public static void main(String[] args) {
 
-        new Inlining().checkIfItsNull();
+        for (int i = 0; i < 1_000_000; i++) {
+            new EmptyMethod().checkIfItsNull();
+        }
     }
 
     public static void isIsNotNull(Object object) {

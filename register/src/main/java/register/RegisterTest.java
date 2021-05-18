@@ -7,8 +7,14 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @author Dominik Janiga
- * @version 0.1
+ * <b>Register and main memory</b>
+ * <p>
+ * Run the following benchmark, examine the result and try to figure out
+ * how to speed up the the code to get better result. Try to explain what was the problem
+ * of poor performance and why.
+ * </p>
+ *  @author Dominik Janiga
+ *  @version 0.1
  */
 
 @BenchmarkMode(Mode.AverageTime)
