@@ -5,26 +5,47 @@ package uncommontrap;
  *
  * @author Dominik_Janiga
  * @version 0.1
- *
  */
 public class UncommonTrapInheritance {
 
-    private static Object uncommonTrap(Object trap){
-        if (trap != null) {
-            System.out.println("I am being trapped!");
-        }
-        return null;
-    }
+    public static void main(String[] args) {
+        Calculator trap = new Subtract();
+        int result = 0;
 
-    public static void main(String[] argv) {
-        Object trap = null;
-        for (int i = 0; i < 250; ++i) {
+        for (int i = 0; i< 250; ++i) {
             for (int j = 0; j < 10_000; ++j) {
-                trap = uncommonTrap(trap);
+                result = trap.calculate(2, 2);
             }
             if (i == 200) {
-                trap = new Object();
+                System.out.println("I am being trapped!");
+                trap = new Sum();
             }
         }
+
+        System.out.println(result);
     }
 }
+
+
+abstract class Calculator {
+
+    abstract int calculate(int a, int b);
+
+}
+
+class Sum extends Calculator {
+
+    @Override
+    int calculate(int a, int b) {
+        return a + b;
+    }
+}
+
+class Subtract extends Calculator {
+
+    @Override
+    int calculate(int a, int b) {
+        return a - b;
+    }
+}
+

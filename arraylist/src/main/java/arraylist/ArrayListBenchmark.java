@@ -22,7 +22,7 @@ import org.openjdk.jmh.runner.RunnerException;
  * Is there a way to improve the performance of theArrayList method?
  * Write at least two solutions and measure the performance with JMH.
  *
- * @author Dominik_Janiga   
+ * @author Dominik_Janiga
  */
 @BenchmarkMode(Mode.Throughput)
 @Measurement(iterations = 20, timeUnit = TimeUnit.MILLISECONDS,  time = 20)
