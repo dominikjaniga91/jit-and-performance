@@ -1,4 +1,4 @@
-package benchmarks.collections.people;
+package collections.people;
 
 import java.util.Set;
 import java.util.stream.Collectors;

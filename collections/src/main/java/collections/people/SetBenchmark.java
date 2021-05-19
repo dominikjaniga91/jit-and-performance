@@ -1,4 +1,4 @@
-package benchmarks.collections.people;
+package collections.people;
 
 import java.util.LinkedHashSet;
 import java.util.Set;
@@ -12,17 +12,19 @@ import java.util.Set;
  * @author Dominik_Janiga
  */
 
-public class Main {
+public class SetBenchmark {
 
     public static void main(String[] args)  {
 
     }
 
-    public void somethingIsNoYesBenchmark() {
+    public Set<Person> somethingIsNoYesBenchmark() {
 
         Set<Person> people = new LinkedHashSet<>();
         for (int i = 0; i < 100; i++) {
             people.add(new Person("Name" + i, "Surname" + i, 20));
         }
+
+        return people;
     }
 }

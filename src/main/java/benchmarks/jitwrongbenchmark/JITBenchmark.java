@@ -1,4 +1,4 @@
-package benchmarks.jit;
+package benchmarks.jitwrongbenchmark;
 
 public class JITBenchmark {
     private static final int BATCH_SIZE = 15000;

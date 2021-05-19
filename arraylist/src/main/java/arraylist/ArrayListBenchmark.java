@@ -18,8 +18,12 @@ import org.openjdk.jmh.annotations.State;
 import org.openjdk.jmh.annotations.Warmup;
 import org.openjdk.jmh.runner.RunnerException;
 
-
-@State(Scope.Benchmark)
+/**
+ * Is there a way to improve the performance of theArrayList method?
+ * Write at least two solutions and measure the performance with JMH.
+ *
+ * @author Dominik_Janiga   
+ */
 @BenchmarkMode(Mode.Throughput)
 @Measurement(iterations = 20, timeUnit = TimeUnit.MILLISECONDS,  time = 20)
 @Fork(value = 2)
@@ -32,28 +36,18 @@ public class ArrayListBenchmark {
     }
 
     @Benchmark
-    public List<String> properlySizedArrayList() {
-        List<String> list = new ArrayList<>(1_000_000);
-        for(int i=0; i < 1_000_000; i++) {
-            list.add(String.valueOf(i));
-        }
-        return list;
-    }
-    @Benchmark
-    public List<String> resizingArrayList() {
+    public List<String> theArrayList(BenchmarkInput input) {
         List<String> list = new ArrayList<>();
-        for(int i=0; i < 1_000_000; i++) {
+        for(int i=0; i < input.input; i++) {
             list.add(String.valueOf(i));
         }
         return list;
     }
 
+    @State(Scope.Benchmark)
+    public class BenchmarkInput {
 
-    @Benchmark
-    public List<String> stream() {
-       return  IntStream.range(0, 1_000_000)
-               .mapToObj(String::valueOf)
-               .collect(Collectors.toList());
+        final int input = 1_000_000;
     }
 
 }

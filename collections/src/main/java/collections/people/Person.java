@@ -1,4 +1,4 @@
-package benchmarks.collections.people;
+package collections.people;
 
 import java.util.Objects;
 

@@ -17,6 +17,9 @@
         <module>loopunrolling</module>
         <module>inlining</module>
         <module>benchmark-first-task</module>
+        <module>forandforeach</module>
+        <module>collections</module>
+        <module>uncommontrap</module>
     </modules>
 
     <properties>

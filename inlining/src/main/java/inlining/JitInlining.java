@@ -16,7 +16,7 @@ import org.openjdk.jmh.runner.RunnerException;
 @Measurement(iterations = 20, timeUnit = TimeUnit.NANOSECONDS,  time = 10)
 @Warmup(iterations = 10, timeUnit = TimeUnit.NANOSECONDS, time = 10)
 @OutputTimeUnit(TimeUnit.NANOSECONDS)
-@Fork(value = 10, warmups = 10, jvmArgs = {"-XX:FreqInlineSize=2"})
+@Fork(value = 10, warmups = 10, jvmArgs = {"-XX:FreqInlineSize=2", "-XX:+"})
 public class JitInlining {
 
     public static void main(String[] args) throws RunnerException, IOException {

@@ -5,6 +5,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openjdk.jmh.annotations.Benchmark;
 import org.openjdk.jmh.annotations.BenchmarkMode;
+import org.openjdk.jmh.annotations.Fork;
 import org.openjdk.jmh.annotations.Measurement;
 import org.openjdk.jmh.annotations.Mode;
 import org.openjdk.jmh.annotations.OutputTimeUnit;
@@ -18,7 +19,7 @@ import org.openjdk.jmh.runner.RunnerException;
 @Measurement(iterations = 20, timeUnit = TimeUnit.MILLISECONDS, time = 20)
 @Warmup(iterations = 10, timeUnit = TimeUnit.MILLISECONDS, time = 20)
 @OutputTimeUnit(TimeUnit.MILLISECONDS)
-//@Fork(value = 10, jvmArgs = {"-client"})
+@Fork(value = 10, jvmArgs = {"-client"})
 public class LoopUnrollingBenchmark {
 
     public static void main(String[] args) throws RunnerException, IOException {
