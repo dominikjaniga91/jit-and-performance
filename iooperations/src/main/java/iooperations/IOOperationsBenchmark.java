@@ -1,47 +1,32 @@
 package iooperations;
 
-import org.openjdk.jmh.annotations.*;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+
 import org.openjdk.jmh.runner.RunnerException;
 
-import java.io.*;
-import java.util.concurrent.TimeUnit;
-
 /**
+ *
+ * Write the benchmark to the method readWithFileInputStream().
+ * What do you think about the performance of that method? Can you improve it?
+ *
  * @author Dominik Janiga
  * @version 0.1
  */
-@State(Scope.Benchmark)
-@BenchmarkMode(Mode.AverageTime)
-@Measurement(iterations = 20, timeUnit = TimeUnit.MILLISECONDS,  time = 10)
-@Warmup(iterations = 10, timeUnit = TimeUnit.MILLISECONDS, time = 10)
-@OutputTimeUnit(TimeUnit.MILLISECONDS)
 public class IOOperationsBenchmark {
 
     public static void main(String[] args) throws RunnerException, IOException {
-        org.openjdk.jmh.Main.main(args);
     }
 
-    private File file = new File("C:\\Users\\Dominik_Janiga\\IdeaProjects\\jit-and-performance\\iooperations\\src\\main\\resources\\test.txt");
+    private File file = new File("iooperations\\src\\main\\resources\\test.txt");
 
-    @Benchmark
     public void readWithFileInputStream() throws IOException {
 
         try (FileInputStream fis = new FileInputStream(file)) {
             int i;
             while ((i = fis.read()) != -1) {
 //                System.out.print((char) i);
-            }
-        }
-    }
-
-
-    @Benchmark
-    public void readWithBufferedReader() throws IOException {
-
-        try (BufferedReader bufferedReader = new BufferedReader(new FileReader(file))) {
-            String line;
-            while ((line = bufferedReader.readLine()) != null) {
-//                System.out.print(line);
             }
         }
     }
