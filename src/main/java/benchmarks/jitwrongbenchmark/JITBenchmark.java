@@ -1,5 +1,7 @@
 package benchmarks.jitwrongbenchmark;
 
+import java.util.Arrays;
+
 public class JITBenchmark {
     private static final int BATCH_SIZE = 15000;
 
@@ -13,14 +15,16 @@ public class JITBenchmark {
         return total;
     }
 
-    private static void benchmarkSum(double[] array) {
+    private static long benchmarkSum(double[] array) {
+        long sum = 0;
         long start = System.nanoTime();
         for (int j = 0; j < BATCH_SIZE; j++) {
-            sum(array);
+            sum += sum(array);
         }
         long stop = System.nanoTime();
         System.out.printf("Computation finished in %d ns.%n",
                 ((stop - start) / BATCH_SIZE));
+        return sum;
     }
 
     public static void main(String[] args) {
