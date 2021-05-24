@@ -23,6 +23,7 @@
         <module>lockellision</module>
         <module>arraycopy</module>
         <module>onstackreplacement</module>
+        <module>wrongbenchmark</module>
     </modules>
 
     <properties>

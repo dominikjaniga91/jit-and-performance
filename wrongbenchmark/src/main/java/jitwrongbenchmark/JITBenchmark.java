@@ -1,4 +1,4 @@
-package benchmarks.jitwrongbenchmark;
+package jitwrongbenchmark;
 
 import java.util.Arrays;
 
