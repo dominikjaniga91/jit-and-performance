@@ -22,6 +22,7 @@
         <module>uncommontrap</module>
         <module>lockellision</module>
         <module>arraycopy</module>
+        <module>onstackreplacement</module>
     </modules>
 
     <properties>
